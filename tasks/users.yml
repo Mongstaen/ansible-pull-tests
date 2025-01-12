@@ -1,0 +1,12 @@
+- name: Create Ansible User
+  ansible.builtin.user:
+    name: ansible
+    system: true
+
+- name: Copy sudoers file
+  ansible.builtin.copy:
+    src: files/sudoers
+    dest: /etc/sudoers.d/ansible
+    owner: root
+    group: root
+    mode: 0440
