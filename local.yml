@@ -15,3 +15,5 @@
       ansible.builtin.include_tasks: tasks/users.yml
     - name: Include tasks from cron.yml
       ansible.builtin.include_tasks: tasks/cron.yml
+    - name: Include tasks from logrotate.yml
+      ansible.builtin.include_tasks: tasks/logrotate.yml

@@ -1,0 +1,9 @@
+# setting a logrotate configuration on the ansible-pull log so it doesn't grow indefinitely
+/var/log/ansible-pull.log {
+    size 10M                  # Rotate when the file reaches 10 MB
+    rotate 5                  # Keep 5 rotated log files
+    compress                  # Compress old log files to save space
+    missingok                 # Ignore missing log files
+    notifempty                # Do not rotate if the log file is empty
+    copytruncate              # Truncate the log file after copying for rotation
+}

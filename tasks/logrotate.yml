@@ -1,0 +1,7 @@
+- name: Copy logrotate config for ansible-pull
+  copy:
+    src: files/ansible-pull
+    dest: /etc/logrotate.d/ansible-pull
+    owner: root
+    group: root
+    mode: "0440"
