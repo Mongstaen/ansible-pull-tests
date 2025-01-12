@@ -1,0 +1,14 @@
+- hosts: localhost
+  connection: local
+  become: true
+
+  pre_tasks:
+    - name: Update APT package cache
+      apt:
+        update_cache: yes
+      changed_when: false
+    - name: Update all packages to the latest version
+      apt:
+        upgrade: safe
+        autoremove: yes
+        autoclean: yes
