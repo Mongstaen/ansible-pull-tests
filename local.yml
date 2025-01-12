@@ -11,5 +11,7 @@
   tasks:
     - name: Include tasks from packages.yml
       ansible.builtin.include_tasks: tasks/packages.yml
-    - name: Include tasks from users.yml  
+    - name: Include tasks from users.yml
       ansible.builtin.include_tasks: tasks/users.yml
+    - name: Include tasks from cron.yml
+      ansible.builtin.include_tasks: tasks/cron.yml
