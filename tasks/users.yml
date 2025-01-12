@@ -10,3 +10,11 @@
     owner: root
     group: root
     mode: "0440"
+
+- name: Ensure log file exist
+  ansible.builtin.file:
+    path: /var/log/ansible-pull.log
+    state: touch
+    owner: ansible
+    group: ansible
+    mode: "0664"
