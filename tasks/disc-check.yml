@@ -1,8 +1,0 @@
-- name: Copy Disc Check file
-  ansible.builtin.copy:
-    src: files/disc-check.sh
-    dest: /usr/local/bin/disc-check.sh
-    mode: '0755'
-
-- name: Run Disc Check
-  ansible.builtin.shell: "/usr/local/bin/disc-check.sh > /var/log/disc-check.log 2>&1"
