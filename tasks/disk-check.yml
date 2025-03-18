@@ -1,2 +1,2 @@
-- name: Run the script from the repository
-  command: "files/disc-check.sh > /var/log/disk-check.log 2>&1"
+- name: Run the script and save output to file
+  shell: "~/ansible-pull-repo/files/disc-check.sh > /var/log/disk-check.log 2>&1"
