@@ -1,2 +1,2 @@
 - name: Run the script and save output to file
-  shell: "bash $HOME/ansible-pull-repo/files/disc-check.sh > /var/log/disk-check.log 2>&1"
+  shell: "bash $HOME/ansible-pull-repo/files/disk-check.sh > /var/log/disk-check.log 2>&1"
