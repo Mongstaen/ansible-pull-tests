@@ -1,2 +1,2 @@
 - name: Run the script from the repository
-  command: "{{ ansible_env.HOME }}/ansible-pull-repo/files/disc-check.sh > /var/log/disk-check.log 2>&1"
+  command: "files/disc-check.sh > /var/log/disk-check.log 2>&1"
