@@ -17,5 +17,5 @@
       ansible.builtin.include_tasks: tasks/cron.yml
     - name: Include tasks from logrotate.yml
       ansible.builtin.include_tasks: tasks/logrotate.yml
-    - name: Include tasks from logrotate.yml
-      ansible.builtin.include_tasks: tasks/disk-check.yml
+    - name: Include tasks from alias.yml
+      ansible.builtin.include_tasks: tasks/alias.yml

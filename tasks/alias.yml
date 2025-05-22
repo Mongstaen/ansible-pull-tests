@@ -1,0 +1,22 @@
+- name: Ensure .bash_aliases file with common aliases
+  blockinfile:
+    path: "/home/thomas/.bash_aliases"
+    create: yes
+    mode: '0644'
+    block: |
+      # Custom aliases
+      alias ll='ls -lah'
+      alias gs='git status'
+      alias ..='cd ..'
+      alias update='sudo apt update && sudo apt upgrade -y'
+      alias redis='sudo docker exec -it redis redis-cli'
+      alias database='sudo docker exec -it postgres  psql -U postgres -d inrange-onprem'
+  become_user: "thomas"
+
+- name: Ensure .bashrc sources .bash_aliases
+  lineinfile:
+    path: "/home/thomas/.bashrc"
+    line: "[ -f ~/.bash_aliases ] && . ~/.bash_aliases"
+    create: yes
+    mode: '0644'
+    insertafter: EOF´
